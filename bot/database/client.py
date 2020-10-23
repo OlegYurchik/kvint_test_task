@@ -1,9 +1,11 @@
+import json
 import logging
 
 from botovod.dbdrivers.gino import DBDriver
 from sqlalchemy import asc, desc
 
 from .fixtures import FIXTURES
+from .models import FollowerState
 
 
 logger = logging.getLogger(__name__)
@@ -83,3 +85,20 @@ class DBClient(DBDriver):
             query = query.limit(limit)
 
         return query
+
+    @classmethod
+    async def get_follower_state(cls, **kwargs):
+        return await cls._get_query(model=FollowerState, **kwargs).gino.first()
+
+    @classmethod
+    async def get_followers_states(cls, **kwargs):
+        return await cls._get_query(model=FollowerState, **kwargs).gino.all()
+
+    @classmethod
+    async def create_follower_state(cls, follower):
+        return await FollowerState.create(follower_id=follower.id)
+
+    @classmethod
+    async def update_follower_state(cls, follower_state, state, data):
+        await follower_state.update(state=state, data=json.dumps(data)).apply()
+

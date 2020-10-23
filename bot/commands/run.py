@@ -7,7 +7,7 @@ from botovod import Botovod
 from botovod.agents.telegram import TelegramAgent
 
 from database.client import DBClient
-from web import generate_telegram_bot_route, generate_telegram_bot_url, telegram_view
+from web import generate_telegram_bot_route, generate_telegram_bot_url, handler, telegram_view
 from .command import Command
 
 
@@ -45,6 +45,7 @@ class RunCommand(Command):
         await self.session["db_client"].connect()
 
         self.session["botovod"].clear_handlers()
+        self.session["botovod"].add_handler(handler)
 
         await self.init_telegram()
 

@@ -1,0 +1,23 @@
+- name: Generate migrations
+  hosts: all
+  vars_files:
+    - vars/common.yml
+
+  tasks:
+    - name: Run bot image for migrate
+      docker_container:
+        name: "{{ IMAGES.bot.container }}"
+        image: "{{ IMAGES.bot.image }}"
+        env: "{{ env }}"
+        network_mode: host
+        command: python3 main.py addfixtures
+
+    - name: Pause for adding fixtures
+      pause:
+        seconds: 15
+
+    - name: Remove bot container
+      docker_container:
+        name: "{{ IMAGES.bot.container }}"
+        state: absent
+        force_kill: yes

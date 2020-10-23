@@ -1,9 +1,9 @@
 aiohttp
 alembic
 git+https://github.com/OlegYurchik/botovod.git
+git+https://github.com/pytransitions/transitions.git
 gino
 jsonschema
 psycopg2-binary
 pytest
 pyyaml
-transitions

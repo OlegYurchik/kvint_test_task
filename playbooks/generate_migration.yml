@@ -55,11 +55,11 @@
       pause:
         seconds: 5
 
-    - name: Remove bot container
-      docker_container:
-        name: "{{ IMAGES.bot.container }}"
-        state: absent
-        force_kill: yes
+#    - name: Remove bot container
+#      docker_container:
+#        name: "{{ IMAGES.bot.container }}"
+#        state: absent
+#        force_kill: yes
 
     - name: Remove database container
       docker_container:

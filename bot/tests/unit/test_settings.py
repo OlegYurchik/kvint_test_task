@@ -4,7 +4,7 @@ import jsonschema
 import pytest
 import yaml
 
-from bot.settings import Settings
+from settings import Settings
 
 
 TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), "settings")

@@ -1,0 +1,9 @@
+service: kvinttest.bot
+data:
+  bot:
+    webhook_url: https://localhost
+    port: 8000
+    certificate_path: /path/to/certificate
+  instance:
+    secret: "JLd~DjqPjD|*z*qd#dSQHu00KdeR7xh#~1qhzmVe}HYN#EHfh5p}Fks1jpZAYahn"
+message: "'privatekey_path' is a dependency of 'certificate_path'"

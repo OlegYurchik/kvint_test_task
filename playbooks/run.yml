@@ -1,0 +1,8 @@
+- name: Run containers
+  hosts: all
+  vars_files:
+    - vars/common.yml
+
+  tasks:
+    - include_tasks: "{{ item.value.path }}/run.yml"
+      with_dict: "{{ IMAGES }}"

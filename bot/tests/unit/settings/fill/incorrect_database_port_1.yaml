@@ -1,0 +1,9 @@
+service: kvinttest.bot
+data:
+  database:
+    engine: postgresql
+    host: localhost
+    port: 65556
+  instance:
+    secret: "q1D4bthrShvc3vaQ6@2Nv~X8QH4X2hr5Z@mRtyIb{@nFFjTj1}n}4}l2hjAFmRxe"
+message: "65556 is greater than the maximum of 65535"

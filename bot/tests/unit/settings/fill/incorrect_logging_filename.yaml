@@ -1,0 +1,9 @@
+service: kvinttest.bot
+data:
+  logging:
+    level: INFO
+    filename: 25
+    filetype: ini
+  instance:
+    secret: "cw#NrD5HddLx;)/|x,q:OB3k.%MAU$&]n7~fK7I-P;vV`D1$!K=$Q*WJk.N+%@c?"
+message: "25 is not of type 'string'"

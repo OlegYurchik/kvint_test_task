@@ -1,0 +1,3 @@
+service: kvinttest.bot
+filename: incorrect_bot_privatekey_path.ini
+message: "-346 is not of type 'string'"

@@ -1,0 +1,6 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_BOT_WEBHOOK_URL: https://localhost
+  KVINTTEST_BOT_PORT: 0
+  KVINTTEST_INSTANCE_SECRET: "V1LE@8x5$5rlzZIrwwc?QeeJE{0j4BPzY7g4SqzUOpSCoaqiex$r*UClVqplrtoM"
+message: "0 is less than the minimum of 1"

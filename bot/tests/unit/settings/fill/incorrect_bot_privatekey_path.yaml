@@ -1,0 +1,10 @@
+service: kvinttest.bot
+data:
+  bot:
+    webhook_url: https://localhost
+    port: 5000
+    certificate_path: /path/to/certificate
+    privatekey_path: 400
+  instance:
+    secret: "Z|?e#6pVnC?%tzu3vPtk#YK3wcek{|qhxzz5?tmMzq*ObH8*pA8W2ONGs~l~IzRw"
+message: "400 is not of type 'string'"

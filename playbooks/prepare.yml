@@ -1,0 +1,66 @@
+- name: Prepare environment
+  hosts: all
+
+  tasks:
+    - name: Check pip
+      shell: "{{ ansible_python.executable }} -m pip --version"
+      register: output
+      ignore_errors: yes
+
+    - block:
+      - name: Download pip
+        get_url:
+          url: https://bootstrap.pypa.io/get-pip.py
+          dest: ./get-pip.py
+          mode: 0777
+        become: yes
+
+      - name: Install pip
+        shell: "{{ ansible_python.executable }} ./get-pip.py"
+        become: yes
+
+      - name: Delete installer
+        file:
+          path: ./get-pip.py
+          state: absent
+
+      when: not output["stdout"] is search("pip")
+
+    - name: Check docker version
+      shell: docker --version
+      register: output
+      ignore_errors: yes
+
+    - block:
+      - name: Download installer
+        get_url:
+          url: https://get.docker.com/
+          dest: ./docker.sh
+          mode: 0777
+        
+      - name: Install docker
+        shell: bash ./docker.sh
+        become: yes
+
+      - name: Delete installer
+        file:
+          path: ./docker.sh
+          state: absent
+
+      when: not output["stdout"] is search("Docker version")
+
+    - name: Add permissions for docker to user
+      shell: usermod -aG docker {{ ansible_user_id }}
+      become: yes
+
+    - name: Install docker-py for python
+      pip:
+        name: docker
+        state: latest
+      become: yes
+
+    - name: Install psycopg
+      pip:
+        name: psycopg2-binary
+        state: latest
+      become: yes

@@ -1,0 +1,6 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_LOGGING_FILENAME: config.yaml
+  KVINTTEST_LOGGING_FILETYPE: yml
+  KVINTTEST_INSTANCE_SECRET: "$+QsDe7g;`9IDwZfIFjMkcY0wE3dv7j]cU\\x_':z}<;41#?z#R(@1x;]k'Q._/aD"
+message: "'yml' is not one of ['yaml', 'ini']"

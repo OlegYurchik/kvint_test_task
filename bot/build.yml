@@ -1,0 +1,8 @@
+- name: Build bot
+  docker_image:
+    name: "{{ IMAGES.bot.image }}"
+    tag: "latest"
+    source: build
+    build:
+      path: "{{ IMAGES.bot.path }}"
+      pull: no

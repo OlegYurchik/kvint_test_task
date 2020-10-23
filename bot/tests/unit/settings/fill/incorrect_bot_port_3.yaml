@@ -1,0 +1,8 @@
+service: kvinttest.bot
+data:
+  bot:
+    webhook_url: https://localhost
+    port: any_string
+  instance:
+    secret: "?j#uXh~e}R$GajX0S3oKR7HsSFs%i$Q5GQhm@XNQfc4o8v7JKmJJjnnXyKzVZBIL"
+message: "'any_string' is not of type 'integer'"

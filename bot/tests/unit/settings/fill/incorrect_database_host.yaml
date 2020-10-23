@@ -1,0 +1,8 @@
+service: kvinttest.bot
+data:
+  database:
+    engine: postgresql
+    host: 237
+  instance:
+    secret: "%*u7m|6DhD8KZ4giL|V8{4monkhbWD1DwF9s2y|e}WbH#jRE~AvdG6q2ja~EXkX6"
+message: "237 is not of type 'string'"

@@ -1,0 +1,4 @@
+service: incorrect_service_name
+env:
+  KVINTTEST_INSTANCE_SECRET: DonCyGNd4FRhYmcvjCumZZdOQ9aDTFih$@~IHBOVC6SIHAHu4uRTD?2~~KN~Fl4p
+message: "'incorrect_service_name' is not one of ['kvinttest.bot']"

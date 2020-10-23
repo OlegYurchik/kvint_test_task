@@ -1,0 +1,40 @@
+- name: Deploy database
+  hosts: all
+
+  tasks:
+    - name: Update package repositories
+      package:
+        update_cache: yes
+      become: yes
+
+    - name: Install database
+      package:
+        name: postgresql
+      become: yes
+
+    - name: Install postgresql-contrib
+      package:
+        name: postgresql-contrib
+      become: yes
+
+    - name: Run database
+      service:
+        name: postgresql
+        state: restarted
+      become: yes
+
+    - name: Add database
+      postgresql_db:
+        name: "{{ env.KVINTTEST_DATABASE_NAME }}"
+      become: yes
+      become_user: postgres
+
+    - name: Add user
+      postgresql_user:
+        db: "{{ env.KVINTTEST_DATABASE_NAME }}"
+        name: "{{ env.KVINTTEST_DATABASE_USER }}"
+        password: "{{ env.KVINTTEST_DATABASE_PASSWORD }}"
+        encrypted: yes
+        priv: ALL
+      become: yes
+      become_user: postgres

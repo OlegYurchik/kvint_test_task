@@ -1,0 +1,26 @@
+type: object
+properties:
+  level:
+    type: string
+    enum:
+      - NOTSET
+      - DEBUG
+      - INFO
+      - WARNING
+      - ERROR
+      - CRITICAL
+  filename:
+    type: string
+  filetype:
+    type: string
+    enum:
+      - yaml
+      - ini
+additionalProperties: true
+required:
+  - level
+dependencies:
+  filename:
+    - filetype
+  filetype:
+    - filename

@@ -1,0 +1,6 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_BOT_WEBHOOK_URL: 123
+  KVINTTEST_BOT_PORT: 124
+  KVINTTEST_INSTANCE_SECRET: "305ujWSworprOS?dAaxs%PgxkohzIG@FdRY96EXbWATF8yQ9Wal~zyTH#D?OBDMW"
+message: "123 is not of type 'string'"

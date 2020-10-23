@@ -1,0 +1,6 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_DATABASE_ENGINE: postgresql
+  KVINTTEST_DATABASE_PARAMS: ghghgh
+  KVINTTEST_INSTANCE_SECRET: "4|bq6bTz{c@iE|f4YAjKKWnF65rHiY7~G?qywGe5#H?WMJEwAfxAgAjZ43cfm9iR"
+message: "'ghghgh' is not of type 'object'"

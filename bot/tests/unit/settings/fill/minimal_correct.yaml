@@ -1,0 +1,5 @@
+service: kvinttest.bot
+data:
+  instance:
+    secret: "Qclc6lehlMDD2vK~HJx~DfR}xBa@K#F56a2FNy%Dr#ze1pH%a7*~E?@ttgoFMX$X"
+message:

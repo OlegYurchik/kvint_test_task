@@ -1,0 +1,4 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_INSTANCE_SECRET: "kf@~X9Xi?X~8NmhEzHKZ9@BzM4wc?c7nDtYDrGkSH|ZW{?O6R2~Fq?{6q9q$f0n~"
+message:

@@ -1,0 +1,8 @@
+- name: Build images
+  hosts: all
+  vars_files:
+    - vars/common.yml
+
+  tasks:
+    - include_tasks: "{{ item.value.path }}/build.yml"
+      with_dict: "{{ IMAGES }}"

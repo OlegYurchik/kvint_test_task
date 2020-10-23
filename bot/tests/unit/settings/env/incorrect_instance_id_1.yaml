@@ -1,0 +1,5 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_INSTANCE_ID: jf9x944c3op8wamw3hxtejdmo8y8cxacrzlj3sih0d667cr345fa082zbc2ijoy
+  KVINTTEST_INSTANCE_SECRET: 44}FX?xm|8*T1oXz4kGyyb5Gv~vD1%D#TiT$cXcm6Vv#wnZ0f9lRIJ9hA@YJjGaU
+message: "'jf9x944c3op8wamw3hxtejdmo8y8cxacrzlj3sih0d667cr345fa082zbc2ijoy' does not match '^[a-z\\\\d]{64}$'"

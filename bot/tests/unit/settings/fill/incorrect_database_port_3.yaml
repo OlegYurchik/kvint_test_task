@@ -1,0 +1,9 @@
+service: kvinttest.bot
+data:
+  database:
+    engine: postgresql
+    host: localhost
+    port: privet
+  instance:
+    secret: "UCyklImABc~rO#ugKQnRSovy?OwJrCl5~75*HMfxmfyL~Ny{TWXFZHpKptdmtlE~"
+message: "'privet' is not of type 'integer'"

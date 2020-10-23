@@ -1,0 +1,7 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_DATABASE_ENGINE: postgresql
+  KVINTTEST_DATABASE_HOST: localhost
+  KVINTTEST_DATABASE_PORT: -80
+  KVINTTEST_INSTANCE_SECRET: "deG~8Apnj?MFoRA6?i4|wG1In1fy|j{NeLF6nqv5BN32WJzPqKwUt84bj{NPA$Iq"
+message: "-80 is less than the minimum of 1"

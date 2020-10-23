@@ -1,0 +1,5 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_BOT_TELEGRAM_TOKEN: incorrect_token
+  KVINTTEST_INSTANCE_SECRET: "v8luzEqN726BHmewvYxXvBnRsXugEEWeLk1nUWqbxIDNGY11dDmOqx4iRJcmm1uK"
+message: "'incorrect_token' does not match '^[0-9]{5,10}:[a-zA-Z0-9_-]{20,35}$'"

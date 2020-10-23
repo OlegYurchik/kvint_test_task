@@ -1,0 +1,10 @@
+service: kvinttest.bot
+data:
+  bot:
+    webhook_url: localhost
+    port: 5000
+    certificate_path: 48
+    privatekey_path: /path/to/key
+  instance:
+    secret: "G~M$7pm4R2DF#wXwLli@~M|gTXCRJR2Cyf%rx0q3MC4Ch@47qT3E~axOi2ad@qlV"
+message: "48 is not of type 'string'"

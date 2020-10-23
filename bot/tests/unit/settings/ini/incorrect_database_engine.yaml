@@ -1,0 +1,3 @@
+service: kvinttest.bot
+filename: incorrect_database_engine.ini
+message: "'incorrect_engine' is not one of ['postgresql']"

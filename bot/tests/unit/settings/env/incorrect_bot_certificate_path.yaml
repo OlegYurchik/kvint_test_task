@@ -1,0 +1,8 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_BOT_WEBHOOK_URL: https://localhost
+  KVINTTEST_BOT_PORT: 5000
+  KVINTTEST_BOT_CERTIFICATE_PATH: 45
+  KVINTTEST_BOT_PRIVATEKEY_PATH: /path/to/key
+  KVINTTEST_INSTANCE_SECRET: "1rOsiiTu98p451|bZK3cO2oNnHGZcZPrQ@~gnVmKrdMER2F?}2sOmaGvSFKND{Sc"
+message: "45 is not of type 'string'"

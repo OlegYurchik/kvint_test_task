@@ -1,0 +1,5 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_DATABASE_HOST: localhost
+  KVINTTEST_INSTANCE_SECRET: "WOptwxW@s278dMc~6EoPTNJ~dLh~#uAkw?|OjWPbacCS$Im8g|f$4sR}dfXsyW5@"
+message: "'engine' is a required property"

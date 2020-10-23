@@ -1,0 +1,20 @@
+- name: Create develop environment
+  hosts: all
+  vars_files:
+    - vars/common.yml
+
+  tasks:
+    - name: Run postgresql
+      docker_container:
+        name: postgres-container
+        image: postgres:latest
+        env:
+          POSTGRES_DB: "{{ env.KVINTTEST_DATABASE_NAME }}"
+          POSTGRES_USER: "{{ env.KVINTTEST_DATABASE_USER }}"
+          POSTGRES_PASSWORD: "{{ env.KVINTTEST_DATABASE_PASSWORD }}"
+          POSTGRES_PORT: "{{ env.KVINTTEST_DATABASE_PORT }}"
+          PGDATA: /var/lib/postgresql/data
+        published_ports:
+          - "127.0.0.1:{{ env.KVINTTEST_DATABASE_PORT }}:5432"
+        cleanup: yes
+

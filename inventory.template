@@ -1,0 +1,71 @@
+all:
+  hosts:
+    localhost:
+      ansible_host: localhost
+      ansible_connection: local
+      ansible_python_interpreter: /path/to/python
+
+      env:
+        KVINTTEST_INSTANCE_SECRET: "n@$NPIDlsBL7qACC~DQkQ?zQ*6xDjCHM@9k@UgrznoOYkEOK8@xYvvr*JvSaTl#5"
+
+        KVINTTEST_LOGGING_LEVEL: INFO
+        KVINTTEST_LOGGING_FILETYPE: yaml
+        KVINTTEST_LOGGING_FILENAME: logging.yaml
+
+        KVINTTEST_DATABASE_ENGINE: postgresql
+        KVINTTEST_DATABASE_HOST: localhost
+        KVINTTEST_DATABASE_PORT: "5432"
+        KVINTTEST_DATABASE_NAME: kvinttest
+        KVINTTEST_DATABASE_USER: kvinttest
+        KVINTTEST_DATABASE_PASSWORD: kvinttest
+
+      CSR_HOST: localhost
+      CSR_COUNTRY: RU
+      CSR_STATE: Saint-Petersburg
+      CSR_LOCATION: Saint-Petersburg
+      CSR_ORGANIZATION: kvinttest
+      CSR_OU: dev
+
+      INSIDE_CERTIFICATE_DIR: /home/kvinttest/ssl
+      OUTSIDE_CERTIFICATE_DIR: /home/kvinttest/ssl
+
+      DB_BACKUP_FILE: dump.sql
+
+    remote:
+      ansible_host: any_ip
+      ansible_connection: ssh
+      ansible_user: root
+      ansible_private_key_file: ~/.ssh/any_private_key
+      ansible_python_interpreter: /path/to/python
+
+      env:
+        KVINTTEST_INSTANCE_SECRET: "%3FEdVPDL@f4FvXf9uKLy@8Tf9DH@ck6lJkyGIP12wvwKTL2dP|{rZaJGMFbmbmr"
+
+        KVINTTEST_LOGGING_LEVEL: INFO
+        KVINTTEST_LOGGING_FILETYPE: yaml
+        KVINTTEST_LOGGING_FILENAME: logging.yaml
+
+        KVINTTEST_DATABASE_ENGINE: postgresql
+        KVINTTEST_DATABASE_HOST: localhost
+        KVINTTEST_DATABASE_PORT: "5432"
+        KVINTTEST_DATABASE_NAME: kvinttest
+        KVINTTEST_DATABASE_USER: kvinttest
+        KVINTTEST_DATABASE_PASSWORD: kvinttest
+
+        KVINTTEST_BOT_PORT: "88"
+        KVINTTEST_BOT_WEBHOOK_URL: https://example.com/handler
+        KVINTTEST_BOT_CERTIFICATE_PATH: /home/bot/ssl/certificate.crt
+        KVINTTEST_BOT_PRIVATEKEY_PATH: /home/bot/ssl/private.key
+        KVINTTEST_BOT_TELEGRAM_TOKEN: any_telegram_token
+
+      CSR_HOST: example.com
+      CSR_COUNTRY: RU
+      CSR_STATE: Saint-Petersburg
+      CSR_LOCATION: Saint-Petersburg
+      CSR_ORGANIZATION: kvinttest
+      CSR_OU: prod
+
+      INSIDE_CERTIFICATE_DIR: /home/kvinttest/ssl
+      OUTSIDE_CERTIFICATE_DIR: /home/kvinttest/ssl
+
+      DB_BACKUP_FILE: dump.sql

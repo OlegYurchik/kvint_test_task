@@ -1,0 +1,8 @@
+service: kvinttest.bot
+data:
+  database:
+    engine: postgresql
+    user: 223
+  instance:
+    secret: "v89jfsBhPgeC6S{FMV}@d%|rfW*B@ab0EO#JQ4W~{*7e5~X?hIC{FFT4eMFI*b|#"
+message: "223 is not of type 'string'"

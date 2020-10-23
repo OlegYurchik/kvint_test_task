@@ -1,0 +1,12 @@
+- name: Create develop environment
+  hosts: all
+  vars_files:
+    - vars/common.yml
+
+  tasks:
+    - name: Stop postgresql
+      docker_container:
+        name: postgres-container
+        state: absent
+        force_kill: yes
+

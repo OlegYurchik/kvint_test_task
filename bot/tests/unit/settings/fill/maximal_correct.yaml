@@ -1,0 +1,26 @@
+service: kvinttest.bot
+data:
+  instance:
+    id: pez2e5yyfszu8a54pgty2kanm72ur9bnncc56mif85pfzivfntncn3p3fzev8z7u
+    secret: "P@Uv}5tEWa{|{rvhlO%i{dWmCQnGs5?9{v?$BRfk93WzQwwQNQUgR2fD1S0wdu1l"
+  logging:
+    level: INFO
+    filetype: yaml
+    filename: /home/service/log_config.yaml
+  database:
+    engine: postgresql
+    host: localhost
+    port: 5432
+    name: dickbot
+    user: dickbot
+    password: dickbot
+    params:
+      var1: key1
+      var2: key2
+  bot:
+    port: 88
+    webhook_url: https://example.com
+    certificate_path: /home/dickbot/ssl/certificate.crt
+    privatekey_path: /home/dickbot/ssl/private.key
+    telegram_token: 123456789:ABCDEFGHIJKLMNOPQRSTUWXYZ
+message:

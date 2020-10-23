@@ -1,0 +1,7 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_DATABASE_ENGINE: postgresql
+  KVINTTEST_DATABASE_HOST: localhost
+  KVINTTEST_DATABASE_PORT: abra_kadabra
+  KVINTTEST_INSTANCE_SECRET: "KtyR|bkeJ*~|1wp7~N##}CW8#PQpI}ZHFGSu06bfMDJXxAE#nu?UplSZ?DS0sBZ~"
+message: "'abra_kadabra' is not of type 'integer'"

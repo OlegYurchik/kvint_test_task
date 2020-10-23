@@ -1,0 +1,9 @@
+aiohttp
+alembic
+git+https://github.com/OlegYurchik/botovod.git
+gino
+jsonschema
+psycopg2-binary
+pytest
+pyyaml
+transitions

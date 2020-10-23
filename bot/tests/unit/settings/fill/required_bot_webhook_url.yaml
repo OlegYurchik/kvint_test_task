@@ -1,0 +1,7 @@
+service: kvinttest.bot
+data:
+  bot:
+    port: 5000
+  instance:
+    secret: "m@|d4~V?{JP0XtZxle~X4YTCLEY%5z9G03wIGARGls@qSs9P%f~@UKrRQYPioR#g"
+message: "'webhook_url' is a dependency of 'port'"

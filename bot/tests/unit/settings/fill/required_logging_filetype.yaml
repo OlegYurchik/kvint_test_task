@@ -1,0 +1,7 @@
+service: kvinttest.bot
+data:
+  logging:
+    filename: conf.ini
+  instance:
+    secret: ",)*c!M)7|%a|D<?G)AxL29\\FwQU*V'c}5y~^\\2vwz](|2KoXxI`ju`419dm6BTJO"
+message: "'filetype' is a dependency of 'filename'"

@@ -1,0 +1,7 @@
+service: kvinttest.bot
+data:
+  bot:
+    webhook_url: https://localhost
+  instance:
+    secret: "Pfkca|BjGsJsesmo}cy1*MAOD7NqyLmjajC6OQWT5J@|TQ}jlIDC9ElMRN$9oQKp"
+message: "'port' is a dependency of 'webhook_url'"

@@ -1,0 +1,8 @@
+service: kvinttest.bot
+data:
+  database:
+    engine: postgresql
+    params: ururu
+  instance:
+    secret: "bL7aIa{lz8gIvfe04nP{6~ogL~~ORb0QYhM~QgvVxT}Kx37hR2riey$3#K|JyMu~"
+message: "'ururu' is not of type 'object'"

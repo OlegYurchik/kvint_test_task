@@ -1,0 +1,6 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_LOGGING_FILENAME: 20
+  KVINTTEST_LOGGING_FILETYPE: yaml
+  KVINTTEST_INSTANCE_SECRET: "-@NHM&<qRHx+S&%Nr|%Xy!L)i'/\\7IGk07m_l29c'R<;9nOcEd.p5tn$~BE{VRq="
+message: "20 is not of type 'string'"

@@ -1,0 +1,7 @@
+service: kvinttest.bot
+data:
+  bot:
+    telegram_token: error_token
+  instance:
+    secret: "jEDqPBijmOaXcJ5YkMbtY2VczBl1tJWiEvG81O7fuC8TAkJyUZUy9eIfGzNyM6pY"
+message: "'error_token' does not match '^[0-9]{5,10}:[a-zA-Z0-9_-]{20,35}$'"

@@ -1,0 +1,7 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_DATABASE_ENGINE: postgresql
+  KVINTTEST_DATABASE_HOST: localhost
+  KVINTTEST_DATABASE_PORT: 65555
+  KVINTTEST_INSTANCE_SECRET: "xRMoe0{weg9RN{LoTz9Fk}hSClbRpOvsk|03bX27diJty4kap9Yr@R%HleupgJ3C"
+message: "65555 is greater than the maximum of 65535"

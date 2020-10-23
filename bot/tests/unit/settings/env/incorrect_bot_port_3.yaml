@@ -1,0 +1,6 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_BOT_WEBHOOK_URL: https://localhost
+  KVINTTEST_BOT_PORT: string
+  KVINTTEST_INSTANCE_SECRET: "Q1Ex#x4gN9Rixc77b5pA@1%WNhJPiETqTB{*1MBMR7VApNqI73p$A~{QCFB*X@yw"
+message: "'string' is not of type 'integer'"

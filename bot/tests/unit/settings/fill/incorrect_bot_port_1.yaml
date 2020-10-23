@@ -1,0 +1,8 @@
+service: kvinttest.bot
+data:
+  bot:
+    webhook_url: https://localhost
+    port: -1
+  instance:
+    secret: "Q8e5pyKySD|YYie}X7IgjOilALYbTJyXQfI3IVpCwf@*IG5xVcVqC0YmhOMCbnYJ"
+message: "-1 is less than the minimum of 1"

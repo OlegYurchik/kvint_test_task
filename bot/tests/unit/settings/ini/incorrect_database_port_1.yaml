@@ -1,0 +1,7 @@
+service: kvinttest.bot
+filename: incorrect_database_port_1.ini
+env:
+  DATABASE_ENGINE: postgresql
+  DATABASE_HOST: localhost
+  DATABASE_PORT: 65555
+message: "65555 is greater than the maximum of 65535"

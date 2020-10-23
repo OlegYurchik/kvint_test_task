@@ -1,0 +1,6 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_DATABASE_ENGINE: postgresql
+  KVINTTEST_DATABASE_HOST: 236
+  KVINTTEST_INSTANCE_SECRET: "1Wbk~rCSMsCqUGNJ{$NMmvuP3Cc}cWVrjaAZWGKpp7HOxqkY$?|$}3mfgp#vkaCx"
+message: "236 is not of type 'string'"

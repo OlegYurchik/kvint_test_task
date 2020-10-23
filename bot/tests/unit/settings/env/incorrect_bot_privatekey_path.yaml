@@ -1,0 +1,8 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_BOT_WEBHOOK_URL: https://localhost
+  KVINTTEST_BOT_PORT: 5000
+  KVINTTEST_BOT_CERTIFICATE_PATH: /path/to/certificate
+  KVINTTEST_BOT_PRIVATEKEY_PATH: -345
+  KVINTTEST_INSTANCE_SECRET: "t9?kt~K1rAYkw86pzdxofI6ndINTGW49RlB$Gq6PE6Af14yv5rX8EFu63GpyoPVm"
+message: "-345 is not of type 'string'"

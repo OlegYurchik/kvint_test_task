@@ -1,0 +1,6 @@
+service: kvinttest.bot
+data:
+  instance:
+    id: fg13iztajynq6oov576zmjeqg78l4so9nv1w77_sx1h9kg1u2fjpoq2sfzu3zkfw
+    secret: "HmruCCkPEAn@V3iSfPsOA6U%%7%W}6R2QBdND9Hi$LNSHpZQvKsPdYI~xfaw$BRT"
+message: "'fg13iztajynq6oov576zmjeqg78l4so9nv1w77_sx1h9kg1u2fjpoq2sfzu3zkfw' does not match '^[a-z\\\\d]{64}$'"

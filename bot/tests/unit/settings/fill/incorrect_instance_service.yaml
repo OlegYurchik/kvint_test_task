@@ -1,0 +1,5 @@
+service: incorrect_service_name
+data:
+  instance:
+    secret: "hUJ3FsjTfuduBgus8zbHOf#7t{18ZfMhs$lFCJ72~mSyZEcf#LzUgyZ1TqqPbTL{"
+message: "'incorrect_service_name' is not one of ['kvinttest.bot']"

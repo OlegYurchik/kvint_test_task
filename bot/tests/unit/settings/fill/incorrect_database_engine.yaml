@@ -1,0 +1,7 @@
+service: kvinttest.bot
+data:
+  database:
+    engine: incorrect_engine
+  instance:
+    secret: "#0~cMbKgNp9@{Dd*Gl$Sca9tN~XJDQcp1VCbcawdcXs#7xORTWtJZ9NyZ@*?~l8o"
+message: "'incorrect_engine' is not one of ['postgresql']"

@@ -1,0 +1,5 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_BOT_TELEGRAM_TOKEN: 865
+  KVINTTEST_INSTANCE_SECRET: "tB53PrKfcezUoS9ks5SU0Nl9EjvjHw2B8Px5wpBs7dqZGuMgdmI2FCfM1n3iSXqS"
+message: "865 is not of type 'string'"

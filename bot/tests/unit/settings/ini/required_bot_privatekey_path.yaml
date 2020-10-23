@@ -1,0 +1,3 @@
+service: kvinttest.bot
+filename: required_bot_privatekey_path.ini
+message: "'privatekey_path' is a dependency of 'certificate_path'"

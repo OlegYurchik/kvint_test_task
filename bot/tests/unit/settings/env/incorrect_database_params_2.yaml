@@ -1,0 +1,6 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_DATABASE_ENGINE: postgresql
+  KVINTTEST_DATABASE_PARAMS: '{"var3": "key4"..}'
+  KVINTTEST_INSTANCE_SECRET: "t8r2pJveylfP2KPP2~?gT5xcpGf1D90$MMn|HV20JihPK5ISwua44WvEg}4H|Rew"
+message: "'{\"var3\": \"key4\"..}' is not of type 'object'"

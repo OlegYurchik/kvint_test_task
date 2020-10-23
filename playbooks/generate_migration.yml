@@ -1,0 +1,67 @@
+- name: Generate migrations
+  hosts: all
+  vars_files:
+    - vars/common.yml
+
+  tasks:
+    - name: Run database container
+      docker_container:
+        name: postgres-container
+        image: postgres:latest
+        env:
+          POSTGRES_DB: "{{ env.KVINTTEST_DATABASE_NAME }}"
+          POSTGRES_USER: "{{ env.KVINTTEST_DATABASE_USER }}"
+          POSTGRES_PASSWORD: "{{ env.KVINTTEST_DATABASE_PASSWORD }}"
+          POSTGRES_PORT: "{{ env.KVINTTEST_DATABASE_PORT }}"
+          PGDATA: /var/lib/postgresql/data
+        network_mode: bridge
+        published_ports:
+          - "127.0.0.1:{{ env.KVINTTEST_DATABASE_PORT }}:5432"
+        cleanup: yes
+
+    - name: Pause for running
+      pause:
+        seconds: 15
+
+    - name: Run bot image for migrate
+      docker_container:
+        name: "{{ IMAGES.bot.container }}"
+        image: "{{ IMAGES.bot.image }}"
+        env: "{{ env }}"
+        network_mode: host
+        command: python3 main.py migrate
+
+    - name: Pause for migrating
+      pause:
+        seconds: 5
+
+    - name: Remove bot container
+      docker_container:
+        name: "{{ IMAGES.bot.container }}"
+        state: absent
+        force_kill: yes
+
+    - name: Run bot image for generating migrations
+      docker_container:
+        name: "{{ IMAGES.bot.container }}"
+        image: "{{ IMAGES.bot.image }}"
+        env: "{{ env }}"
+        network_mode: host
+        volumes:
+          - "../bot/alembic/versions:/home/bot/alembic/versions"
+        command: python3 main.py makemigrations
+
+    - name: Pause for generationg migration
+      pause:
+        seconds: 5
+
+    - name: Remove bot container
+      docker_container:
+        name: "{{ IMAGES.bot.container }}"
+        state: absent
+        force_kill: yes
+
+    - name: Remove database container
+      docker_container:
+        name: postgres-container
+        state: absent

@@ -1,0 +1,5 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_BOT_PORT: 5000
+  KVINTTEST_INSTANCE_SECRET: "edl{A$pm6gvxgBryBicwnwa3{@2oh~cJ#J*XKbVTBOo~3}w9qD9J3uBlrbd3j~vv"
+message: "'webhook_url' is a dependency of 'port'"

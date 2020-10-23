@@ -1,0 +1,7 @@
+service: kvinttest.bot
+data:
+  logging:
+    level: warning
+  instance:
+    secret: "x5LEudwo2y#I1-k[7O|Y0Gb'f_`HvT?uV3v=T#u$_VXY&?)ej[+$ZEPg$QJ.k<ap"
+message: "'warning' is not one of ['NOTSET', 'DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL']"

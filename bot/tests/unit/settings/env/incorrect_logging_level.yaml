@@ -1,0 +1,5 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_LOGGING_LEVEL: incorrect_level
+  KVINTTEST_INSTANCE_SECRET: "82{'tf'}7oz4I4,j0A)g<?op`5H~/6$lh+RDeP),TP>R+_VvbSNR)+]R1WIT60HT"
+message: "'incorrect_level' is not one of ['NOTSET', 'DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL']"

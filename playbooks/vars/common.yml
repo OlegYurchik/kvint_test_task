@@ -1,0 +1,6 @@
+IMAGES:
+  bot:
+    image: kvinttest-bot
+    container: kvinttest-bot-container
+    path: ../bot
+

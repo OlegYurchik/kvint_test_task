@@ -1,0 +1,18 @@
+type: object
+properties:
+  id:
+    type: string
+    pattern: ^[a-z\d]{64}$
+  service:
+    type: string
+    enum:
+      - kvinttest.bot
+  secret:
+    type: string
+    minLength: 64
+    maxLength: 64
+additionalProperties: true
+required:
+  - id
+  - service
+  - secret

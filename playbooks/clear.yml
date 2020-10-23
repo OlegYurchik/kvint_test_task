@@ -1,0 +1,25 @@
+- name: Clear containers
+  hosts: all
+  vars_files:
+    - vars/common.yml
+
+  tasks:
+    - name: Delete keys directory
+      file:
+        path: "{{ OUTSIDE_CERTIFICATE_DIR }}"
+        state: absent
+      become: yes
+      when: OUTSIDE_CERTIFICATE_DIR is defined
+
+    - name: Stop container
+      docker_container:
+        name: "{{ item.value.container }}"
+        state: absent
+        force_kill: yes
+      with_dict: "{{ IMAGES }}"
+
+    - name: Delete all images
+      docker_image:
+        name: "{{ item.value.image }}"
+        state: absent
+      with_dict: "{{ IMAGES }}"

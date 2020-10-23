@@ -1,0 +1,9 @@
+service: kvinttest.bot
+data:
+  logging:
+    level: INFO
+    filename: logging.ini
+    filetype: init
+  instance:
+    secret: ")4eY.?_7W7mqd>#e*(<B+%g[|R;RfZ*2nvPu8,'gYEiQ1cT~R@ma==KX]y:eM@CU"
+message: "'init' is not one of ['yaml', 'ini']"

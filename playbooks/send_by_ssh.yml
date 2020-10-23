@@ -1,0 +1,39 @@
+- name: Send images by ssh
+  hosts: all
+  vars_files:
+    - vars/common.yml
+
+  tasks:
+    - name: Pack image
+      docker_image:
+        name: "{{ item.value.image }}"
+        archive_path: "../{{ item.value.image }}.tar"
+        source: local
+      delegate_to: 127.0.0.1
+      with_dict: "{{ IMAGES }}"
+
+    - name: Pull image
+      copy:
+        src: "../{{ item.value.image }}.tar"
+        dest: "./{{ item.value.image }}.tar"
+      with_dict: "{{ IMAGES }}"
+
+    - name: Unpack image
+      docker_image:
+        name: "{{ item.value.image }}"
+        load_path: "./{{ item.value.image }}.tar"
+        source: load
+      with_dict: "{{ IMAGES }}"
+
+    - name: Remove archive with image from remote
+      file:
+        path: "./{{ item.value.image }}.tar"
+        state: absent
+      with_dict: "{{ IMAGES }}"
+    
+    - name: Remove archive from host
+      file:
+        path: "../{{ item.value.image }}.tar"
+        state: absent
+      delegate_to: 127.0.0.1
+      with_dict: "{{ IMAGES }}"

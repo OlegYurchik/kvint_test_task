@@ -1,0 +1,29 @@
+type: object
+properties:
+  webhook_url:
+    type: string
+  port:
+    type: integer
+    minimum: 1
+    maximum: 65535
+  certificate_path:
+    type: string
+  privatekey_path:
+    type: string
+  telegram_token:
+    type: string
+    pattern: ^[0-9]{5,10}:[a-zA-Z0-9_-]{20,35}$
+additionalProperties: true
+dependencies:
+  port:
+    - webhook_url
+  webhook_url:
+    - port
+  certificate_path:
+    - webhook_url
+    - port
+    - privatekey_path
+  privatekey_path:
+    - webhook_url
+    - port
+    - certificate_path

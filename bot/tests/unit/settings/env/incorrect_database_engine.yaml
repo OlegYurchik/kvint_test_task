@@ -1,0 +1,5 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_DATABASE_ENGINE: incorrect_engine
+  KVINTTEST_INSTANCE_SECRET: "9k5Qk}?Z{WTG8jb*Tmcc0waYHi0uB88yR~CQ?YBfWpFeg3tcauDIvaKZPCoJs8hD"
+message: "'incorrect_engine' is not one of ['postgresql']"

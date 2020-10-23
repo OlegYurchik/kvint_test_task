@@ -1,0 +1,9 @@
+service: kvinttest.bot
+data:
+  database:
+    engine: postgresql
+    host: localhost
+    port: -100
+  instance:
+    secret: "~f7ZhujjMRnCFITEKoUZffNTOgChY720#bwtW3$ZzjJJfx0nA}%zs}AljQm}%ZiN"
+message: "-100 is less than the minimum of 1"

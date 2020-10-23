@@ -1,0 +1,8 @@
+service: kvinttest.bot
+data:
+  bot:
+    webhook_url: 125
+    port: 124
+  instance:
+    secret: "lUs|3ZUPlAF0J{Uo0EaH3~YmwM71vd~xuy7ETijSIrrZ6yq%h~4IHIcN6l7Ni2pT"
+message: "125 is not of type 'string'"

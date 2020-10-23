@@ -1,0 +1,3 @@
+service: incorrect_service_name
+filename: incorrect_instance_service.ini
+message: "'incorrect_service_name' is not one of ['kvinttest.bot']"

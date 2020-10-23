@@ -1,0 +1,8 @@
+service: kvinttest.bot
+data:
+  bot:
+    webhook_url: https://localhost
+    port: 81965
+  instance:
+    secret: "fCVP8ilYRhc|5w5rKL@C2c@b5XetBEKVCM14ER#~Lf4Ij3{Nh2kYgiKL~grSKcJ@"
+message: "81965 is greater than the maximum of 65535"

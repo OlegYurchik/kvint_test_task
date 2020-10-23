@@ -1,0 +1,7 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_BOT_WEBHOOK_URL: https://localhost
+  KVINTTEST_BOT_PORT: 5000
+  KVINTTEST_BOT_CERTIFICATE_PATH: /path/to/certificate
+  KVINTTEST_INSTANCE_SECRET: "V6HjYTD5wTxV~cQ0kUC8lQNmwuJM~2@Zr{ZbtRfEvZ?sSCVY#WIo7xG13sUGJ~vn"
+message: "'privatekey_path' is a dependency of 'certificate_path'"

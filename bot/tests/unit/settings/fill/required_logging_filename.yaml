@@ -1,0 +1,7 @@
+service: kvinttest.bot
+data:
+  logging:
+    filetype: ini
+  instance:
+    secret: "'!I!A4YkppFijnD0gQ;Y+LDX&_<^K(q*rKX`,{\\,P&h7hE[]5x:3.,*,;k2*=c]~"
+message: "'filename' is a dependency of 'filetype'"

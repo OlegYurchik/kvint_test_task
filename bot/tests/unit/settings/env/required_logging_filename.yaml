@@ -1,0 +1,5 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_LOGGING_FILETYPE: ini
+  KVINTTEST_INSTANCE_SECRET: "GR~wrZz=-?{Y?ly&.(G4F6Ho=W{$fA59N}:gX\\#[UqUBu'RAD-DYBMONGLnU)[}x"
+message: "'filename' is a dependency of 'filetype'"

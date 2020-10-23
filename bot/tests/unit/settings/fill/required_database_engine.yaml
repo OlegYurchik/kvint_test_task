@@ -1,0 +1,7 @@
+service: kvinttest.bot
+data:
+  database:
+    host: localhost
+  instance:
+    secret: "xf@0KSx2V{}U#k~6OvLT%KIF{kVNVb6Wp%?0K1BjGJK|w@DqpFu974Ny@runjA~?"
+message: "'engine' is a required property"

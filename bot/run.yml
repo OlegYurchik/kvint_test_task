@@ -1,0 +1,17 @@
+- name: Set volumes list
+  set_fact:
+    volumes: []
+
+- name: Add certificate volumes
+  set_fact:
+    volumes: "{{ volumes + [OUTSIDE_CERTIFICATE_DIR + ':' + INSIDE_CERTIFICATE_DIR] }}"
+  when: OUTSIDE_CERTIFICATE_DIR is defined and INSIDE_CERTIFICATE_DIR is defined
+
+- name: Run bot container
+  docker_container:
+    name: "{{ IMAGES.bot.container }}"
+    image: "{{ IMAGES.bot.image }}"
+    env: "{{ env }}"
+    command: python main.py run
+    network_mode: host
+    volumes: "{{ volumes }}"

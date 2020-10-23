@@ -1,0 +1,5 @@
+service: kvinttest.bot
+env:
+  KVINTTEST_INSTANCE_ID: u38717or5xb1oonxv08tcbcovsswnf7xxk6to!tzf4m168xvclio2ll0rgvmxlxj
+  KVINTTEST_INSTANCE_SECRET: KCuVnXjr2$twrKw%AKjp#O|yt{zCI@8De4rPGyalSQ|hK1kUV{6xEfFGzUF@ht$s
+message: "'u38717or5xb1oonxv08tcbcovsswnf7xxk6to!tzf4m168xvclio2ll0rgvmxlxj' does not match '^[a-z\\\\d]{64}$'"

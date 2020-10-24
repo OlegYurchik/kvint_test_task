@@ -1,16 +1,79 @@
+from collections import OrderedDict
+import re
+
 from transitions import Machine
+from transitions.core import MachineError
 
 from database.models.types import StateEnum
 
 
 class Dialog:
+    TRIGGERS = OrderedDict((
+        (re.compile(r"Да"), "say_yes"),
+        (re.compile(r"Нет"), "say_no"),
+        (re.compile(r"Большую"), "say_big"),
+        (re.compile(r"Маленькую"), "say_small"),
+        (re.compile(r"Картой"), "say_card"),
+        (re.compile(r"Наличкой"), "say_cash"),
+        (re.compile(r".*"), "say_anything"),
+    ))
     TRANSITIONS = [
-        StateEnum.START,
-        StateEnum.SIZE,
-        StateEnum.PAY_METHOD,
-        StateEnum.CONFIRM,
-        StateEnum.THANKS,
-        StateEnum.START,
+        {
+            "trigger": "say_anything",
+            "source": StateEnum.START,
+            "dest": StateEnum.SIZE,
+            "after": "after",
+            "before": "before",
+        },
+        {
+            "trigger": "say_big",
+            "source": StateEnum.SIZE,
+            "dest": StateEnum.PAY_METHOD,
+            "after": "after",
+            "before": "before",
+        },
+        {
+            "trigger": "say_small",
+            "source": StateEnum.SIZE,
+            "dest": StateEnum.PAY_METHOD,
+            "after": "after",
+            "before": "before",
+        },
+        {
+            "trigger": "say_card",
+            "source": StateEnum.PAY_METHOD,
+            "dest": StateEnum.CONFIRM,
+            "after": "after",
+            "before": "before",
+        },
+        {
+            "trigger": "say_cash",
+            "source": StateEnum.PAY_METHOD,
+            "dest": StateEnum.CONFIRM,
+            "after": "after",
+            "before": "before",
+        },
+        {
+            "trigger": "say_yes",
+            "source": StateEnum.CONFIRM,
+            "dest": StateEnum.THANKS,
+            "after": "after",
+            "before": "before",
+        },
+        {
+            "trigger": "say_no",
+            "source": StateEnum.CONFIRM,
+            "dest": StateEnum.SIZE,
+            "after": "after",
+            "before": "before",
+        },
+        {
+            "trigger": "say_anything",
+            "source": StateEnum.THANKS,
+            "dest": StateEnum.SIZE,
+            "after": "after",
+            "before": "before",
+        },
     ]
     MESSAGES = {
         StateEnum.START: "Привет",
@@ -28,19 +91,21 @@ class Dialog:
     }
 
     def __init__(self, state):
-        self.machine = Machine(model=self, states=StateEnum, initial=state)
-        self.machine.add_ordered_transitions(self.TRANSITIONS, conditions="check",
-                                             after="after", before="before")
+        self.machine = Machine(model=self, transitions=self.TRANSITIONS, states=StateEnum,
+                               initial=state)
         self.answer = None
         self.data = None
 
     def handle(self, text, data):
         self.data = data
-        self.next_state(text=text)
-
-    def check(self, text):
-        answers = self.ANSWERS[self.state]
-        return not answers or text in answers
+        self.answer = self.MESSAGES[self.state].format(**self.data)
+        for regex, trigger in self.TRIGGERS.items():
+            if regex.match(text):
+                try:
+                    self.trigger(trigger, text=text)
+                except MachineError:
+                    pass
+                break
 
     def before(self, text):
         self.data[self.state.value] = text.lower()

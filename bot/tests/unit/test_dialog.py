@@ -12,10 +12,10 @@ from dialogs import Dialog
     (StateEnum.PAY_METHOD, {"size": "маленькую"}, "Наличкой", StateEnum.CONFIRM),
     (StateEnum.PAY_METHOD, {"size": "большую"}, "Никак", StateEnum.PAY_METHOD),
     (StateEnum.CONFIRM, {"size": "маленькую", "pay_method": "картой"}, "Да", StateEnum.THANKS),
-    (StateEnum.CONFIRM, {"size": "большую", "pay_method": "наличкой"}, "Нет", StateEnum.START),
+    (StateEnum.CONFIRM, {"size": "большую", "pay_method": "наличкой"}, "Нет", StateEnum.SIZE),
     (StateEnum.CONFIRM, {"size": "большую", "pay_method": "картой"}, "А?", StateEnum.CONFIRM),
-    (StateEnum.THANKS, {}, "Что угодно", StateEnum.START),
-    (StateEnum.THANKS, {}, "Любой текст", StateEnum.START),
+    (StateEnum.THANKS, {}, "Что угодно", StateEnum.SIZE),
+    (StateEnum.THANKS, {}, "Любой текст", StateEnum.SIZE),
 ))
 def test_dialog(state, data, text, expected):
     dialog = Dialog(state=state)

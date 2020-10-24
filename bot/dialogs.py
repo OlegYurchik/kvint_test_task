@@ -79,7 +79,7 @@ class Dialog:
         StateEnum.START: "Привет",
         StateEnum.SIZE: "Какую вы хотите пиццу? Большую или маленькую?",
         StateEnum.PAY_METHOD: "Как вы будете платить?",
-        StateEnum.CONFIRM: "Вы хотите большую {size} пиццу, оплата - {pay_method}?",
+        StateEnum.CONFIRM: "Вы хотите {size} пиццу, оплата - {pay_method}?",
         StateEnum.THANKS: "Спасибо за заказ",
     }
     ANSWERS = {

@@ -50,5 +50,6 @@ async def handler(agent, chat, message, follower, **scope):
         keyboard = TelegramKeyboard(
             buttons=([answer] for answer in dialog.ANSWERS[dialog.state]),
             resize=True,
+            one_time=True,
         )
     await agent.a_send_message(chat=chat, text=dialog.answer, keyboard=keyboard)
